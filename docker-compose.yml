@@ -24,7 +24,7 @@ services:
     ports:
       - 9000:9000
     volumes:
-      - ./app:/var/www/app:cached
+      - ./:/var/www/app:cached
       - ./docker/logs/app:/var/www/app/var/log:cached
       - ./docker/php/default.ini:/usr/local/etc/php/conf.d/default.ini
       - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
@@ -42,7 +42,7 @@ services:
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./docker/nginx/app.conf:/etc/nginx/conf.d/app.conf:ro
       - ./docker/logs/nginx:/var/log/nginx:cached
-      - ./app:/var/www/app:cached
+      - ./:/var/www/app:cached
     networks:
       - web
   node:
@@ -51,7 +51,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - ./app:/app
+      - ./:/app
     working_dir: /app
     tty: true
 

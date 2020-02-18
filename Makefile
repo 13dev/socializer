@@ -12,3 +12,7 @@ cs-check: ## executes coding standards in dry run mode
 .PHONY: layer
 layer: ## Check issues with layers
 		$(compose) run --rm php sh -lc 'php bin/deptrac.phar analyze --formatter-graphviz=0 --no-cache'
+
+.PHONY: style
+style: ## executes php analizers
+		$(compose) run --rm php sh -lc './vendor/bin/phpstan analyse -l 6 -c phpstan.neon src tests'
