@@ -1,5 +1,3 @@
-FROM php:7.4-fpm
-
 # Install dependencies
 RUN apt-get update && apt-get install --no-install-recommends -y \
     libfreetype6-dev \
