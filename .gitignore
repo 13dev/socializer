@@ -66,7 +66,3 @@
 /.php_cs
 /.php_cs.cache
 ###< friendsofphp/php-cs-fixer ###
-
-docker/logs/nginx/*
-docker/logs/app/*
-docker/mysql/data/*
