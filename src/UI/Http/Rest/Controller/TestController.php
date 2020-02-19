@@ -17,9 +17,8 @@ class TestController extends AbstractController
      *
      * @return JsonResponse
      */
-
     public function getHomeAction()
     {
-        return new JsonResponse("Working!");
+        return new JsonResponse('Working!');
     }
 }
